@@ -5,10 +5,10 @@ const options = [3, 4, 5, 7, 8];
 
 let hours = 0;
 let minutes = 0;
-let secundes = 0;
+let secends = 0;
 
 function showTime() {
-    return (`0${hours}:${(minutes < 10 ? "0" + minutes : minutes)}:${(secundes < 10 ? "0" + secundes : secundes)}`);
+    return (`0${hours}:${(minutes < 10 ? "0" + minutes : minutes)}:${(secends < 10 ? "0" + secends : secends)}`);
 }
 
 timeControl.value = showTime();
@@ -22,19 +22,19 @@ radios.forEach((radio, i) => {
 })
 
 function time() {
-    if (secundes > 0) {
-        secundes--;
+    if (secends > 0) {
+        secends--;
     } else if (minutes > 0) {
         minutes--;
-        secundes = 59;
+        secends = 59;
     } else if (hours > 0) {
         hours--;
         minutes = 59;
-        secundes = 59;
+        secends = 59;
     }
     timeControl.value = showTime();
 
-    if (hours == 0 && minutes == 0 && secundes == 0) {
+    if (hours == 0 && minutes == 0 && secends == 0) {
         timeControl.style.color = "red";
         timeControl.value = `Eggs is done`;
         btn.disabled = "";

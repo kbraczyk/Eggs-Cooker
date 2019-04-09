@@ -49,7 +49,7 @@ body {
     background-color: #fcfcfc;
     position: -webkit-sticky;
     position: sticky;
-    top: 2px;
+    top: 0;
     margin: 30px 0;
     z-index: 10;
 }
@@ -94,7 +94,7 @@ body {
 .recipes-content,
 .aboutinfo {
     width: 90%;
-    min-height: 400px;
+    min-height: 420px;
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 5px 5px 10px darkgoldenrod;
@@ -105,7 +105,7 @@ body {
 }
 
 .section-title {
-    padding-top: 40px;
+    padding-top: 38px;
     font-size: 24px;
     color: #dd2c00;
     font-style: italic;
@@ -265,6 +265,10 @@ h1 {
     text-align: justify;
 }
 
+.aboutinfo p:last-of-type {
+    margin-bottom: 10px
+}
+
 @media all and (min-width:960px) {
 
     .page-header h1 {
@@ -273,6 +277,10 @@ h1 {
 
     .aboutinfo p {
         width: 95%;
+    }
+
+    .aboutinfo p:last-of-type {
+        margin-bottom: 20px
     }
 
     .section-title {
