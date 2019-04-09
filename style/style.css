@@ -105,6 +105,7 @@ body {
 }
 
 .section-title {
+    padding-top: 40px;
     font-size: 24px;
     color: #dd2c00;
     font-style: italic;
@@ -206,6 +207,18 @@ input[name=showTime] {
 .recipes-title::first-letter,
 .decorate::first-letter {
     font-size: 30px;
+}
+
+.recipe,
+.recipes-title {
+    outline: none;
+    cursor: pointer;
+}
+
+.recipe:focus,
+.recipes-title:focus {
+    outline: none;
+
 }
 
 .option {
