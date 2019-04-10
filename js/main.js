@@ -1,7 +1,6 @@
 const radios = [...document.querySelectorAll(".cookingDegree")];
 const btn = document.querySelector(".timer button");
 const timeControl = document.querySelector(".timer input")
-const options = [3, 4, 5, 7, 8];
 
 let hours = 0;
 let minutes = 0;
@@ -15,7 +14,7 @@ timeControl.value = showTime();
 
 radios.forEach((radio, i) => {
     radio.addEventListener("click", () => {
-        minutes = options[i];
+        minutes = (1 * radio.value);
         timeControl.value = showTime();
         timeControl.style.color = "white";
     })
@@ -37,8 +36,8 @@ function time() {
     if (hours == 0 && minutes == 0 && secends == 0) {
         timeControl.style.color = "red";
         timeControl.value = `Eggs is done`;
-        btn.disabled = "";
-        radios.forEach((radio) => radio.disabled = "");
+        btn.disabled = false;
+        radios.forEach((radio) => radio.disabled = false);
         return;
     }
     setTimeout(time, 1000);
@@ -47,6 +46,6 @@ function time() {
 btn.addEventListener("click", (e) => {
     e.preventDefault();
     time();
-    btn.disabled = "disabled";
-    radios.forEach((radio) => radio.disabled = "disabled");
+    btn.disabled = true;
+    radios.forEach((radio) => radio.disabled = true);
 })
