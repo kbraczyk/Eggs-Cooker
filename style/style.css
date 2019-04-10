@@ -37,10 +37,13 @@ body {
 }
 
 .page-title,
-.page-menu a:hover,
 .recipes-title::first-letter,
 .decorate::first-letter {
     color: #c41700;
+}
+
+.menu:hover {
+    color: rgb(255, 115, 0);
 }
 
 .page-menu {
@@ -72,7 +75,11 @@ body {
     -o-transition: .3s all;
 }
 
-.page-menu a:hover::after {
+.active {
+    color: #c41700;
+}
+
+.active::after {
     content: "";
     min-width: 50px;
     min-height: 0px;
