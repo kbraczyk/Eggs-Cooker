@@ -294,10 +294,6 @@ h1 {
         font-size: 42px;
     }
 
-    .page-menu a:hover::after {
-        bottom: 5px;
-    }
-
     .subtitle,
     .page-menu a {
         font-size: 26px;

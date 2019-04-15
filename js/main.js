@@ -12,7 +12,7 @@ function showTime() {
 
 timeControl.value = showTime();
 
-radios.forEach((radio, i) => {
+radios.forEach((radio) => {
     radio.addEventListener("click", () => {
         minutes = (1 * radio.value);
         timeControl.value = showTime();
