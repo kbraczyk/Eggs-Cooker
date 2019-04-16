@@ -161,7 +161,6 @@ input[type=radio]:checked+label:before {
     padding: 0;
 }
 
-button,
 input[name=showTime] {
     width: 100%;
     color: rgb(245, 245, 245);
@@ -170,9 +169,36 @@ input[name=showTime] {
     font-weight: 700;
 }
 
-button {
+.btn,
+.reset {
+    font-size: 20px;
+    font-weight: 700;
     padding: 10px 15px;
+    transition: 0.5s all;
+}
+
+.btn {
+    width: 55%;
+    color: rgb(245, 245, 245);
+    border: none;
     background-color: #c41700;
+}
+
+.reset {
+    outline: none;
+    border: 2px solid #c41700;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+
+}
+
+.reset:hover {
+    background-color: #ff7664;
+}
+
+.stop {
+    display: none;
+    background-color: #000;
 }
 
 input[name=showTime] {
@@ -250,6 +276,10 @@ h1 {
 }
 
 .timer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 50%;
     margin: 0 auto;
 }
@@ -301,12 +331,18 @@ h1 {
         padding: 10px;
     }
 
-    button:hover {
+
+
+    .btn:hover {
         -webkit-transition: 0.5s all;
         transition: 0.5s all;
         -webkit-transform: translateY(2px);
         transform: translateY(2px);
         background-color: #640d01;
+    }
+
+    .stop:hover {
+        background-color: #c41700;
     }
 
     .option {
